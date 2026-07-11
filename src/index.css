@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Joetom Engineers Palette */
+  --color-blue-500: #0082a6; /* Vibrant Teal Accent */
+  --color-blue-600: #004b75; /* Joetom Core Blue */
+  --color-blue-700: #003b5c; /* Deep Professional Navy */
+  --color-blue-800: #041d30; /* Dark Blue Slate */
+  --color-blue-900: #02111c; /* Very Dark Navy Base */
+}
+
+/* Custom scrollbar styling for a polished, architectural look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #02111c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0082a6; /* custom brand teal */
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+

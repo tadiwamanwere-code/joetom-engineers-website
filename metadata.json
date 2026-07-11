@@ -1,0 +1,6 @@
+{
+  "name": "Joetom Engineers",
+  "description": "The official website for Joetom Engineers, a civil, structural, and building construction firm based in Chinhoyi, Zimbabwe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
