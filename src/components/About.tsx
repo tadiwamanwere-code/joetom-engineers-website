@@ -1,12 +1,12 @@
 import { motion } from 'motion/react';
-import { ShieldCheck, HardHat, Eye } from 'lucide-react';
+import { ShieldCheck, HardHat, Building2 } from 'lucide-react';
 import { VALUES_DATA } from '../data';
 
 export default function About() {
   const iconMap = [
-    <ShieldCheck className="w-5 h-5 text-blue-600 group-hover:text-white" key="shield" />,
-    <HardHat className="w-5 h-5 text-blue-600 group-hover:text-white" key="hardhat" />,
-    <Eye className="w-5 h-5 text-blue-600 group-hover:text-white" key="eye" />,
+    <ShieldCheck className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" key="shield" strokeWidth={1.75} />,
+    <HardHat className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" key="hardhat" strokeWidth={1.75} />,
+    <Building2 className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" key="building" strokeWidth={1.75} />,
   ];
 
   return (
@@ -48,27 +48,32 @@ export default function About() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {VALUES_DATA.map((value, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white p-8 border border-gray-100 shadow-sm relative group hover:border-blue-500 transition-colors duration-300"
+                className="bg-white pt-10 pb-8 px-8 border border-gray-100 shadow-sm hover:shadow-xl relative group flex flex-col overflow-hidden transition-shadow duration-300"
                 id={`value-card-${idx}`}
               >
-                <div className="w-10 h-10 rounded-none bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                  <div className="group-hover:text-white transition-colors duration-300">
-                    {iconMap[idx % iconMap.length]}
-                  </div>
+                {/* Watermark index number */}
+                <span className="absolute -top-3 right-4 text-7xl font-display font-bold text-gray-100 group-hover:text-blue-50 transition-colors duration-300 select-none pointer-events-none">
+                  {String(idx + 1).padStart(2, '0')}
+                </span>
+
+                <div className="relative w-16 h-16 bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-300 shrink-0">
+                  {iconMap[idx % iconMap.length]}
                 </div>
-                <h4 className="text-lg font-display font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+
+                <h4 className="relative text-xl md:text-2xl font-display font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                   {value.title}
                 </h4>
-                <p className="text-sm text-gray-600 font-sans font-light leading-relaxed">
+                <p className="relative text-sm md:text-base text-gray-600 font-sans font-light leading-relaxed flex-grow">
                   {value.description}
                 </p>
-                <div className="absolute top-0 right-0 w-2 h-2 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                <div className="relative mt-8 h-1 w-12 bg-yellow-500 group-hover:w-full transition-all duration-500" />
               </motion.div>
             ))}
           </div>

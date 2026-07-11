@@ -7,7 +7,7 @@ export default function Gallery() {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-blue-600 text-white overflow-hidden relative">
+    <section id="gallery" className="py-24 md:py-32 bg-blue-700 text-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
         {/* Section Header */}

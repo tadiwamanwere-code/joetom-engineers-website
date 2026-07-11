@@ -45,6 +45,23 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Real Site Photo Banner */}
+        <div className="relative h-64 sm:h-80 md:h-96 w-full mb-16 md:mb-24 overflow-hidden border border-white/10">
+          <img
+            src="/images/gallery-concrete-action.jpg"
+            alt="Joetom Engineers crew at work during a concrete pour"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-blue-600/40" />
+          <div className="absolute bottom-0 left-0 px-6 py-4 md:px-8 md:py-6 bg-blue-800/90">
+            <span className="text-xs md:text-sm font-mono tracking-[0.2em] text-yellow-500 uppercase font-semibold">
+              Real Crews. Real Results.
+            </span>
+          </div>
+        </div>
+
         {/* Services Interactive Selector Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           

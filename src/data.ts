@@ -27,7 +27,7 @@ export const VALUES_DATA: Value[] = [
 export const OWNER_DATA = {
   name: "Lovemore Munguri",
   title: "Managing Director",
-  photo: "/images/lovemore-owner-portrait.png",
+  photo: "/images/lovemore-owner-full-body.png",
   bio: [
     "Lovemore Munguri leads Joetom Engineers, overseeing the firm's civil, structural, and construction projects from initial site assessment through final handover.",
     "Under his direction, Joetom Engineers works with residential, commercial, and civil clients across Zimbabwe, with an emphasis on technical focus, disciplined site work, and well managed construction projects."
