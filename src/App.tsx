@@ -63,22 +63,22 @@ export default function App() {
         {/* Company About & Values (Bone/Ivory White Background) */}
         <About />
 
-        {/* Meet the Owner (Bone/Ivory White Background) */}
+        {/* Meet the Owner Spotlight (Mid-Navy Background) */}
         <Owner />
 
-        {/* Capabilities Accordion (Charcoal Industrial Background) */}
+        {/* Capabilities Accordion (Dark Navy Background) */}
         <Services />
 
-        {/* Portfolio & Case Studies (Bone/Ivory White Background) */}
+        {/* Portfolio & Case Studies (Light Background) */}
         <Projects />
 
-        {/* Real Site Photo Gallery (Navy Background) */}
+        {/* Real Site Photo Gallery (Mid-Navy Background) */}
         <Gallery />
 
-        {/* Engineering Process Steps (Charcoal Industrial Background) */}
+        {/* Engineering Process Steps (Light Background) */}
         <Process />
 
-        {/* Custom Form, Location Map, and Phone Inquiries (Charcoal Industrial Background) */}
+        {/* Custom Form, Location Map, and Phone Inquiries (Dark Navy CTA Background) */}
         <Contact />
       </main>
 
