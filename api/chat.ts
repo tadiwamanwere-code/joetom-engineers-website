@@ -75,30 +75,28 @@ export default async function handler(req: any, res: any) {
     }
     contents.push({ role: "user", parts: [{ text: message }] });
 
-    const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
-      contents,
-      config: {
-        systemInstruction: SYSTEM_INSTRUCTION,
-        temperature: 0.7,
-      },
-    });
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("TIMEOUT")), 9000)
+    );
+
+    const response: any = await Promise.race([
+      ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents,
+        config: {
+          systemInstruction: SYSTEM_INSTRUCTION,
+          temperature: 0.7,
+        },
+      }),
+      timeoutPromise,
+    ]);
 
     res.status(200).json({ text: response.text || "I was unable to formulate a response. Please try again." });
   } catch (err: any) {
     console.error("Gemini Error:", err);
-    const errMsg = err?.message || "";
-    if (
-      errMsg.includes("API key not valid") ||
-      errMsg.includes("INVALID_ARGUMENT") ||
-      errMsg.includes("key") ||
-      errMsg.includes("400")
-    ) {
-      res.status(200).json({
-        text: "I am currently running in offline demo mode because the configured Gemini API key is invalid or has expired. In the meantime, I can still assist you with any questions about Joetom Engineers' civil engineering, structural designs, building construction, and project management!",
-      });
-      return;
-    }
-    res.status(500).json({ error: "Failed to process chat response: " + errMsg });
+    // Any AI provider failure (timeout, overload, invalid key, etc.) degrades to the offline
+    // fallback so visitors always get a useful reply instead of a raw error.
+    const { message } = req.body || {};
+    res.status(200).json({ text: fallbackReply(message || "") });
   }
 }

@@ -101,18 +101,17 @@ Your tone should be professional, confident, precise, and polite. Avoid verbose 
       res.json({ text: response.text || "I was unable to formulate a response. Please try again." });
     } catch (err: any) {
       console.error("Gemini Error:", err);
-      const errMsg = err.message || "";
-      if (
-        errMsg.includes("API key not valid") ||
-        errMsg.includes("INVALID_ARGUMENT") ||
-        errMsg.includes("key") ||
-        errMsg.includes("400")
-      ) {
-        return res.json({
-          text: "I am currently running in offline demo mode because the configured Gemini API key is invalid or has expired. To restore full AI services, please make sure a valid API key is entered under **Settings > Secrets** in the AI Studio panel.\n\nIn the meantime, I can still assist you with any questions about Joetom Engineers' civil engineering, structural designs, building construction, and project management!"
-        });
+      // Any AI provider failure degrades to the offline fallback so visitors always get a useful reply.
+      const lowerMsg = String(req.body?.message || "").toLowerCase();
+      let fallbackReply = "Thank you for reaching out to Joetom Engineers. Currently, our AI assistant is running in offline demo mode. ";
+      if (lowerMsg.includes("project") || lowerMsg.includes("build") || lowerMsg.includes("mall") || lowerMsg.includes("portfolio")) {
+        fallbackReply += "We're currently building the Chinhoyi Mall, a commercial retail development in Chinhoyi's CBD. We're adding more completed and in-progress projects to our portfolio as they're finished.";
+      } else if (lowerMsg.includes("contact") || lowerMsg.includes("quote") || lowerMsg.includes("price") || lowerMsg.includes("consult") || lowerMsg.includes("estimate") || lowerMsg.includes("hire")) {
+        fallbackReply += "To get a comprehensive structural blueprint review, Bills of Quantities (BoQ) calculation, or project quotation, please fill out our inquiry form at the bottom of the page, or contact us directly at info@joetomengineers.co.zw or +263 77 351 4902.";
+      } else {
+        fallbackReply += "We specialize in Building Construction, Civil & Structural Works, Steel Fixing & Concreting, Brickwork & Finishing, Roads, Paving, Water & Sewer Reticulation, and BoQ Project Management. Let us know if you would like details on our services or active builds.";
       }
-      res.status(500).json({ error: "Failed to process chat response: " + err.message });
+      res.json({ text: fallbackReply });
     }
   });
 
