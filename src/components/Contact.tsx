@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Sliders, AlertTriangle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Sliders, AlertTriangle, MessageCircle } from 'lucide-react';
 import { CONTACT_INFO } from '../data';
 
 export default function Contact() {
@@ -56,7 +56,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#0B0C0E] text-white overflow-hidden relative">
+    <section id="contact" className="py-24 md:py-32 bg-[#052E46] text-white overflow-hidden relative">
       {/* Background radial spotlight */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
 
@@ -87,24 +87,51 @@ export default function Contact() {
             <div className="space-y-6" id="contact-info-list">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-blue-500" />
+                  <Phone className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
                   <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block">
-                    TELEPHONE HOTLINE
+                    CALL US
+                  </span>
+                  <div className="flex flex-col sm:flex-row sm:gap-3">
+                    <a
+                      href={`tel:${CONTACT_INFO.phone}`}
+                      className="text-sm md:text-base font-mono text-white hover:text-blue-400 transition-colors"
+                    >
+                      {CONTACT_INFO.phoneFormatted}
+                    </a>
+                    <a
+                      href={`tel:${CONTACT_INFO.phone2}`}
+                      className="text-sm md:text-base font-mono text-white hover:text-blue-400 transition-colors"
+                    >
+                      {CONTACT_INFO.phone2Formatted}
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block">
+                    WHATSAPP
                   </span>
                   <a
-                    href={`tel:${CONTACT_INFO.phone}`}
-                    className="text-sm md:text-base font-mono text-white hover:text-blue-500 transition-colors"
+                    href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm md:text-base font-mono text-white hover:text-blue-400 transition-colors"
                   >
-                    {CONTACT_INFO.phone}
+                    Chat on WhatsApp
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-blue-500" />
+                  <Mail className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
                   <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block">
@@ -150,7 +177,7 @@ export default function Contact() {
 
             {/* ARTISTIC VECTOR GEOMETRIC MAP (Fits perfectly in iframe context) */}
             <div
-              className="bg-[#121317] border border-white/5 p-6 relative h-56 flex flex-col justify-between overflow-hidden shadow-inner group"
+              className="bg-[#0A425F] border border-white/5 p-6 relative h-56 flex flex-col justify-between overflow-hidden shadow-inner group"
               id="vector-map-widget"
             >
               <div className="absolute inset-0 opacity-15 flex flex-col justify-between pointer-events-none p-2 font-mono text-[8px] text-gray-500">
@@ -206,7 +233,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column (Interactive Contact Form) */}
-          <div className="lg:col-span-7 bg-[#121317] border border-white/5 p-8 md:p-12 shadow-xl relative overflow-hidden">
+          <div className="lg:col-span-7 bg-[#0A425F] border border-white/5 p-8 md:p-12 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-3 h-3 bg-blue-600" />
             
             <AnimatePresence mode="wait">
@@ -279,7 +306,7 @@ export default function Contact() {
                         name="projectType"
                         value={formState.projectType}
                         onChange={handleInputChange}
-                        className="w-full bg-[#121317] border border-white/10 focus:border-blue-500 px-4 py-3 text-sm font-sans text-white focus:outline-none transition-colors cursor-pointer"
+                        className="w-full bg-[#0A425F] border border-white/10 focus:border-blue-500 px-4 py-3 text-sm font-sans text-white focus:outline-none transition-colors cursor-pointer"
                       >
                         <option value="residential">High-End Residential</option>
                         <option value="commercial">Commercial / Corporate</option>
@@ -347,18 +374,18 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-blue-600 hover:bg-blue-500 disabled:bg-blue-950 disabled:text-gray-500 text-white font-mono text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-4 bg-yellow-500 hover:bg-yellow-400 disabled:bg-gray-600 disabled:text-gray-300 text-[#101820] font-display font-bold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                     id="submit-proposal-btn"
                   >
                     {isSubmitting ? (
                       <>
-                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                        TRANSMITTING METRICS...
+                        <span className="w-4 h-4 border-2 border-[#101820]/30 border-t-[#101820] rounded-full animate-spin"></span>
+                        SENDING...
                       </>
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        TRANSMIT PROJECT PROPOSAL
+                        SEND REQUEST
                       </>
                     )}
                   </button>

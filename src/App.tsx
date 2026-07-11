@@ -5,6 +5,7 @@ import About from './components/About';
 import Owner from './components/Owner';
 import Services from './components/Services';
 import Projects from './components/Projects';
+import Gallery from './components/Gallery';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -25,7 +26,7 @@ export default function App() {
   // Scroll listener to update active navigation item based on current viewport
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'owner', 'services', 'projects', 'process', 'contact'];
+      const sections = ['home', 'about', 'owner', 'services', 'projects', 'gallery', 'process', 'contact'];
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       for (const section of sections) {
@@ -50,7 +51,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#FAF9F6] min-h-screen text-gray-900 font-sans selection:bg-orange-500 selection:text-white antialiased">
+    <div className="bg-[#F4F7FA] min-h-screen text-gray-900 font-sans selection:bg-orange-500 selection:text-white antialiased">
       {/* Sticky Top Navbar */}
       <Navbar activeSection={activeSection} onNavigate={handleNavigate} />
 
@@ -70,6 +71,9 @@ export default function App() {
 
         {/* Portfolio & Case Studies (Bone/Ivory White Background) */}
         <Projects />
+
+        {/* Real Site Photo Gallery (Navy Background) */}
+        <Gallery />
 
         {/* Engineering Process Steps (Charcoal Industrial Background) */}
         <Process />

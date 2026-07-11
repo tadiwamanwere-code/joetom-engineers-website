@@ -1,4 +1,4 @@
-import { Hammer, ArrowUp, ArrowUpRight, Phone, Mail } from 'lucide-react';
+import { ArrowUp, ArrowUpRight, Phone, Mail, Facebook } from 'lucide-react';
 import { CONTACT_INFO } from '../data';
 
 interface FooterProps {
@@ -11,26 +11,29 @@ export default function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer id="main-footer" className="bg-[#07080A] text-white border-t border-white/5 py-16 relative overflow-hidden">
+    <footer id="main-footer" className="bg-blue-800 text-white border-t border-white/10 py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/5">
-          
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+
           {/* Logo & Slogan Column */}
           <div className="md:col-span-5 space-y-6">
             <button
               onClick={() => onNavigate('home')}
-              className="flex items-center gap-3 group text-left cursor-pointer"
+              className="flex items-center gap-2.5 group text-left cursor-pointer"
             >
-              <div className="w-9 h-9 border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:border-blue-500 bg-white/5">
-                <Hammer className="w-4 h-4 text-white group-hover:text-blue-500" />
-              </div>
+              <img
+                src="/images/joetom-logo-400.png"
+                alt="Joetom Engineers"
+                className="h-10 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
               <div>
-                <span className="font-display font-bold tracking-widest text-lg text-white block">
-                  JOETOM
+                <span className="font-display font-bold tracking-wide text-base text-white block leading-tight">
+                  JOETOM ENGINEERS
                 </span>
-                <span className="text-[9px] font-mono tracking-[0.25em] text-gray-400 block -mt-1 group-hover:text-blue-500 transition-colors">
-                  ENGINEERS
+                <span className="text-[9px] font-mono tracking-[0.25em] text-blue-400 block -mt-0.5">
+                  BUILDING EXCELLENCE
                 </span>
               </div>
             </button>
@@ -50,12 +53,13 @@ export default function Footer({ onNavigate }: FooterProps) {
                 { id: 'owner', label: 'THE OWNER' },
                 { id: 'services', label: 'CAPABILITIES' },
                 { id: 'projects', label: 'CASE STUDIES' },
+                { id: 'gallery', label: 'GALLERY' },
                 { id: 'process', label: 'THE LIFECYCLE' },
               ].map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-gray-400 hover:text-blue-500 transition-colors cursor-pointer uppercase"
+                    className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer uppercase"
                   >
                     {link.label}
                   </button>
@@ -73,18 +77,27 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   href={`tel:${CONTACT_INFO.phone}`}
-                  className="text-gray-400 hover:text-blue-500 transition-colors flex items-center gap-2 group"
+                  className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                 >
-                  <Phone className="w-3.5 h-3.5 text-gray-600 group-hover:text-blue-500 transition-colors" />
+                  <Phone className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
                   {CONTACT_INFO.phoneFormatted}
                 </a>
               </li>
               <li>
                 <a
-                  href={`mailto:${CONTACT_INFO.email}`}
-                  className="text-gray-400 hover:text-blue-500 transition-colors flex items-center gap-2 group"
+                  href={`tel:${CONTACT_INFO.phone2}`}
+                  className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                 >
-                  <Mail className="w-3.5 h-3.5 text-gray-600 group-hover:text-blue-500 transition-colors" />
+                  <Phone className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
+                  {CONTACT_INFO.phone2Formatted}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
+                >
+                  <Mail className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
                   {CONTACT_INFO.email}
                 </a>
               </li>
@@ -93,10 +106,21 @@ export default function Footer({ onNavigate }: FooterProps) {
                   href={CONTACT_INFO.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-500 transition-colors flex items-center gap-2 group"
+                  className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                 >
-                  <ArrowUpRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-blue-500 transition-colors" />
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
                   joetomengineers.co.zw
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CONTACT_INFO.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
+                >
+                  <Facebook className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
+                  @joetomengineers
                 </a>
               </li>
             </ul>
@@ -113,11 +137,11 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           <button
             onClick={handleScrollToTop}
-            className="flex items-center gap-2 px-3 py-2 border border-white/5 hover:border-blue-500 hover:text-blue-500 transition-colors group cursor-pointer"
+            className="flex items-center gap-2 px-3 py-2 border border-white/10 hover:border-blue-400 hover:text-blue-400 transition-colors group cursor-pointer"
             aria-label="Scroll back to top"
           >
-            BACK TO SUMMIT
-            <ArrowUp className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-500 group-hover:-translate-y-0.5 transition-all" />
+            BACK TO TOP
+            <ArrowUp className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>
 

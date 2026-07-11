@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
+  --font-display: "Poppins", ui-sans-serif, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Custom Joetom Engineers Palette */
-  --color-blue-500: #0082a6; /* Vibrant Teal Accent */
-  --color-blue-600: #004b75; /* Joetom Core Blue */
-  --color-blue-700: #003b5c; /* Deep Professional Navy */
-  --color-blue-800: #041d30; /* Dark Blue Slate */
-  --color-blue-900: #02111c; /* Very Dark Navy Base */
+  /* Joetom Engineers brand palette */
+  --color-blue-400: #0fa4c7; /* Bright Cyan */
+  --color-blue-500: #087ea3; /* Construction Blue */
+  --color-blue-600: #052e46; /* Deep Navy */
+  --color-blue-700: #0a425f; /* Panel Navy (lighter, for cards on navy sections) */
+  --color-blue-800: #03202f; /* Darkest Navy (footer) */
+  --color-blue-900: #011016;
+
+  --color-yellow-400: #f7c545;
+  --color-yellow-500: #f5b51b; /* Safety Yellow (CTAs) */
+  --color-yellow-600: #d99e0c;
 }
 
 /* Custom scrollbar styling for a polished, architectural look */
@@ -19,14 +24,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #02111c;
+  background: #011016;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #0a425f;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0082a6; /* custom brand teal */
+  background: #0fa4c7; /* brand cyan */
 }
 
 /* Smooth scroll behavior */

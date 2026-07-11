@@ -8,7 +8,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-[#FAF9F6] text-gray-900 overflow-hidden">
+    <section id="projects" className="py-24 md:py-32 bg-[#F4F7FA] text-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Section Header */}
@@ -58,7 +58,7 @@ export default function Projects() {
                   </div>
 
                   {/* Category Badge */}
-                  <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-[#FAF9F6]/90 backdrop-blur-sm border border-gray-200 text-[10px] font-mono tracking-widest text-gray-800 uppercase">
+                  <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-[#F4F7FA]/90 backdrop-blur-sm border border-gray-200 text-[10px] font-mono tracking-widest text-gray-800 uppercase">
                     {project.categoryLabel}
                   </div>
                 </div>

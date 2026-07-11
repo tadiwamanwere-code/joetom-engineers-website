@@ -22,7 +22,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#0B0C0E] text-white overflow-hidden relative">
+    <section id="services" className="py-24 md:py-32 bg-[#052E46] text-white overflow-hidden relative">
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-zinc-800/20 rounded-full blur-[120px] pointer-events-none" />
@@ -90,7 +90,7 @@ export default function Services() {
 
           {/* Details Panel Viewport (Right) */}
           <div className="lg:col-span-7 h-full flex flex-col justify-between">
-            <div className="bg-[#121317] border border-white/5 p-8 md:p-12 min-h-[420px] flex flex-col justify-between relative group overflow-hidden">
+            <div className="bg-[#0A425F] border border-white/5 p-8 md:p-12 min-h-[420px] flex flex-col justify-between relative group overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 transform translate-x-12 -translate-y-12 rotate-45 pointer-events-none transition-transform duration-700 group-hover:scale-125" />
               
               <AnimatePresence mode="wait">

@@ -141,7 +141,7 @@ export default function Chatbot() {
               <MessageSquare key="chat" className="w-6 h-6" />
             )}
           </AnimatePresence>
-          <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-gray-900 text-[#FAF9F6] text-xs font-mono py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow border border-white/5">
+          <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-gray-900 text-[#F4F7FA] text-xs font-mono py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow border border-white/5">
             JOETOM ASSISTANT
           </span>
         </motion.button>
@@ -159,7 +159,7 @@ export default function Chatbot() {
             transition={{ type: 'spring', damping: 25, stiffness: 350 }}
           >
             {/* Header */}
-            <div className="bg-[#0B0C0E] text-[#FAF9F6] p-4 flex items-center justify-between border-b border-white/10" id="chat-header">
+            <div className="bg-[#052E46] text-[#F4F7FA] p-4 flex items-center justify-between border-b border-white/10" id="chat-header">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center border border-blue-500/30">
                   <HardHat className="w-4 h-4 text-white" />
@@ -182,7 +182,7 @@ export default function Chatbot() {
             </div>
 
             {/* Info bar */}
-            <div className="bg-[#FAF9F6] border-b border-gray-100 p-2 px-4 flex items-center gap-2 text-gray-500 text-[11px] font-sans">
+            <div className="bg-[#F4F7FA] border-b border-gray-100 p-2 px-4 flex items-center gap-2 text-gray-500 text-[11px] font-sans">
               <Info className="w-3.5 h-3.5 text-blue-500 shrink-0" />
               <span>Ask about custom estimates, project engineering, or materials.</span>
             </div>

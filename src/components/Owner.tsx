@@ -7,7 +7,7 @@ export default function Owner() {
     .join('');
 
   return (
-    <section id="owner" className="py-24 md:py-32 bg-[#FAF9F6] text-gray-900 overflow-hidden">
+    <section id="owner" className="py-24 md:py-32 bg-[#F4F7FA] text-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
@@ -22,28 +22,28 @@ export default function Owner() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white border border-gray-100 p-8 md:p-12 shadow-sm">
-          {/* Photo / Placeholder */}
+          {/* Photo */}
           <div className="lg:col-span-4 flex justify-center">
-            <div className="relative w-64 h-64 border border-gray-200 p-2 bg-gray-50">
+            <div className="relative w-64 h-80 border border-gray-200 p-2 bg-blue-600">
               <div className="w-full h-full relative overflow-hidden flex items-center justify-center">
                 {OWNER_DATA.photo ? (
                   <img
                     src={OWNER_DATA.photo}
-                    alt={OWNER_DATA.name}
-                    className="w-full h-full object-cover"
+                    alt={`${OWNER_DATA.name}, ${OWNER_DATA.title} of Joetom Engineers`}
+                    className="w-full h-full object-contain object-bottom"
                     referrerPolicy="no-referrer"
                   />
                 ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 text-blue-700">
+                  <div className="w-full h-full flex flex-col items-center justify-center text-white">
                     <span className="text-5xl font-display font-bold tracking-tight">{initials}</span>
-                    <span className="mt-3 text-[10px] font-mono tracking-widest text-gray-400 uppercase">
+                    <span className="mt-3 text-[10px] font-mono tracking-widest text-gray-300 uppercase">
                       Photo coming soon
                     </span>
                   </div>
                 )}
               </div>
-              <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b-2 border-r-2 border-blue-600 pointer-events-none" />
-              <div className="absolute -top-2 -left-2 w-12 h-12 border-t-2 border-l-2 border-blue-600 pointer-events-none" />
+              <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b-2 border-r-2 border-yellow-500 pointer-events-none" />
+              <div className="absolute -top-2 -left-2 w-12 h-12 border-t-2 border-l-2 border-yellow-500 pointer-events-none" />
             </div>
           </div>
 

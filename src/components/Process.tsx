@@ -22,7 +22,7 @@ export default function Process() {
   };
 
   return (
-    <section id="process" className="py-24 md:py-32 bg-[#0B0C0E] text-white relative overflow-hidden">
+    <section id="process" className="py-24 md:py-32 bg-[#052E46] text-white relative overflow-hidden">
       {/* Structural visual accents */}
       <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/5 -translate-y-1/2 z-0" />
       <div className="absolute top-0 left-1/4 w-[1px] h-full bg-white/5 z-0" />
@@ -59,7 +59,7 @@ export default function Process() {
                   onClick={() => setActiveStep(idx)}
                   className={`w-full text-left p-5 border transition-all duration-300 relative group cursor-pointer ${
                     isActive
-                      ? 'bg-[#121317] border-blue-500'
+                      ? 'bg-[#0A425F] border-blue-500'
                       : 'bg-transparent border-transparent opacity-50 hover:opacity-100'
                   }`}
                   id={`process-step-btn-${idx}`}
@@ -90,7 +90,7 @@ export default function Process() {
 
           {/* Timeline Content View (Right 8 columns) */}
           <div className="lg:col-span-8 flex flex-col justify-center">
-            <div className="bg-[#121317] border border-white/5 p-8 md:p-12 min-h-[380px] flex flex-col justify-between relative">
+            <div className="bg-[#0A425F] border border-white/5 p-8 md:p-12 min-h-[380px] flex flex-col justify-between relative">
               
               <AnimatePresence mode="wait">
                 <motion.div

@@ -10,7 +10,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-[#FAF9F6] text-gray-900 overflow-hidden">
+    <section id="about" className="py-24 md:py-32 bg-[#F4F7FA] text-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Story Section */}
