@@ -39,9 +39,9 @@ export default function Hero({ onNavigate }: HeroProps) {
         />
       </div>
 
-      {/* Gradient overlay: darker at bottom-left for text legibility, lets the ceiling show top-right */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-tr from-blue-900/92 via-blue-600/70 to-blue-600/35" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-900/70 via-transparent to-transparent" />
+      {/* Light neutral scrim: only behind the text (left/bottom) so the ceiling photo stays clear */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/65 via-black/20 to-transparent" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
       {/* Hero Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full text-left flex flex-col justify-center h-full">
