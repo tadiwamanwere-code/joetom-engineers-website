@@ -1,7 +1,7 @@
 import { Project, Service, Value, ProcessStep } from './types';
 
 export const HERO_DATA = {
-  bgImage: "/images/placeholder-hero.svg",
+  bgImage: "/images/alstyle-hero.jpg",
   tagline: "TRANSFORM YOUR SPACE",
   headline: "Alstyle Construction",
   subheadline: "Ceiling installation & renovation specialists — PVC, gypsum, and suspended ceilings finished to a clean, modern standard, from top to bottom.",
@@ -139,7 +139,7 @@ export const PROJECTS_DATA: Project[] = [
     category: "residential",
     categoryLabel: "Gypsum Ceiling",
     description: "A modern gypsum ceiling with a recessed perimeter and LED cove lighting, giving the living room a warm, floating-ceiling feature effect.",
-    afterImage: "/images/ceiling-livingroom.svg",
+    afterImage: "/images/ceiling-livingroom.jpg",
     year: "Recent",
     location: "Zimbabwe",
     client: "Private Residence",
@@ -156,7 +156,7 @@ export const PROJECTS_DATA: Project[] = [
     category: "residential",
     categoryLabel: "Gypsum Ceiling",
     description: "A stepped bulkhead ceiling running the length of a hallway, with evenly spaced recessed downlights for a clean, high-end look.",
-    afterImage: "/images/ceiling-hallway.svg",
+    afterImage: "/images/ceiling-hallway.jpg",
     year: "Recent",
     location: "Zimbabwe",
     client: "Private Residence",
@@ -173,7 +173,7 @@ export const PROJECTS_DATA: Project[] = [
     category: "residential",
     categoryLabel: "Ceiling & Lighting",
     description: "A flush, moisture-tolerant ceiling with recessed lighting over a modern kitchen and island — bright, even, and easy to maintain.",
-    afterImage: "/images/ceiling-kitchen.svg",
+    afterImage: "/images/ceiling-kitchen.jpg",
     year: "Recent",
     location: "Zimbabwe",
     client: "Private Residence",
@@ -186,14 +186,15 @@ export const PROJECTS_DATA: Project[] = [
   }
 ];
 
-// Branded placeholder imagery — replace these SVGs with real Alstyle project photos.
+// Stock ceiling photography (Unsplash, free for commercial use). Swap for real
+// Alstyle project photos when available.
 export const GALLERY_IMAGES = [
-  { src: "/images/ceiling-livingroom.svg", alt: "Gypsum living room ceiling with LED cove lighting by Alstyle Construction" },
-  { src: "/images/ceiling-hallway.svg", alt: "Hallway bulkhead ceiling with recessed downlights" },
-  { src: "/images/ceiling-kitchen.svg", alt: "Modern kitchen ceiling with recessed lighting" },
-  { src: "/images/ceiling-pvc.svg", alt: "Waterproof PVC ceiling installation" },
-  { src: "/images/ceiling-suspended.svg", alt: "Suspended grid ceiling in an office space" },
-  { src: "/images/ceiling-cornice.svg", alt: "Bedroom gypsum ceiling with decorative cornice and cove lighting" }
+  { src: "/images/ceiling-livingroom.jpg", alt: "Gypsum living room ceiling with LED cove lighting by Alstyle Construction" },
+  { src: "/images/ceiling-hallway.jpg", alt: "Hallway bulkhead ceiling with recessed downlights" },
+  { src: "/images/ceiling-kitchen.jpg", alt: "Modern kitchen ceiling with recessed lighting" },
+  { src: "/images/ceiling-pvc.jpg", alt: "Waterproof PVC ceiling installation" },
+  { src: "/images/ceiling-suspended.jpg", alt: "Suspended grid ceiling in an office space" },
+  { src: "/images/ceiling-cornice.jpg", alt: "Bedroom gypsum ceiling with decorative cornice and cove lighting" }
 ];
 
 export const CONTACT_INFO = {

@@ -52,7 +52,7 @@ export default function Services() {
         {/* Real Site Photo Banner */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full mb-16 md:mb-24 overflow-hidden border border-white/10">
           <img
-            src="/images/ceiling-livingroom.svg"
+            src="/images/ceiling-livingroom.jpg"
             alt="Modern gypsum ceiling with LED cove lighting by Alstyle Construction"
             className="w-full h-full object-cover"
             loading="lazy"
