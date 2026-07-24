@@ -1,0 +1,37 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Modern ceiling with recessed lighting">
+  <defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123268"/>
+      <stop offset="1" stop-color="#0a1c44"/>
+    </linearGradient>
+    <radialGradient id="hglow" cx="50%" cy="8%" r="70%">
+      <stop offset="0" stop-color="#f5a833" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#f5a833" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hdl" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff7e6" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#f5a833" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f5a833" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#hbg)"/>
+  <rect width="1600" height="900" fill="url(#hglow)"/>
+  <!-- receding coffered ceiling -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.09">
+    <rect x="120" y="90" width="1360" height="720" rx="10"/>
+    <rect x="280" y="180" width="1040" height="560" rx="8"/>
+    <rect x="440" y="270" width="720" height="400" rx="6"/>
+    <rect x="600" y="360" width="400" height="240" rx="4"/>
+  </g>
+  <rect x="280" y="180" width="1040" height="560" rx="8" fill="none" stroke="#f5a833" stroke-opacity="0.4" stroke-width="2"/>
+  <!-- rows of recessed downlights -->
+  <g>
+    <circle cx="360" cy="140" r="22" fill="url(#hdl)"/><circle cx="620" cy="140" r="22" fill="url(#hdl)"/><circle cx="980" cy="140" r="22" fill="url(#hdl)"/><circle cx="1240" cy="140" r="22" fill="url(#hdl)"/>
+    <circle cx="520" cy="230" r="18" fill="url(#hdl)"/><circle cx="800" cy="230" r="18" fill="url(#hdl)"/><circle cx="1080" cy="230" r="18" fill="url(#hdl)"/>
+    <circle cx="700" cy="320" r="14" fill="url(#hdl)"/><circle cx="900" cy="320" r="14" fill="url(#hdl)"/>
+    <g fill="#fff7e6">
+      <circle cx="360" cy="140" r="4"/><circle cx="620" cy="140" r="4"/><circle cx="980" cy="140" r="4"/><circle cx="1240" cy="140" r="4"/>
+      <circle cx="520" cy="230" r="3"/><circle cx="800" cy="230" r="3"/><circle cx="1080" cy="230" r="3"/>
+    </g>
+  </g>
+</svg>

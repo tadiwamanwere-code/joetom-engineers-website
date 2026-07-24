@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertTriangle, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, Clock, Send, CheckCircle2, AlertTriangle, MessageCircle } from 'lucide-react';
 import { CONTACT_INFO } from '../data';
 
-const BUDGET_OPTIONS = ['Small Project', 'Mid-Size Project', 'Large Project'];
+const BUDGET_OPTIONS = ['Single Room', 'Whole House', 'Commercial'];
 
 export default function Contact() {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     phone: '',
-    projectType: 'residential',
+    projectType: 'gypsum',
     budget: BUDGET_OPTIONS[0],
     description: '',
   });
@@ -48,14 +48,12 @@ export default function Contact() {
         name: '',
         email: '',
         phone: '',
-        projectType: 'residential',
+        projectType: 'gypsum',
         budget: BUDGET_OPTIONS[0],
         description: '',
       });
     }, 1400);
   };
-
-  const mapSrc = `https://www.google.com/maps?q=${CONTACT_INFO.coordinates.lat},${CONTACT_INFO.coordinates.lng}&z=15&output=embed`;
 
   return (
     <section id="contact" className="py-24 md:py-32 bg-blue-600 text-white overflow-hidden relative">
@@ -70,10 +68,10 @@ export default function Contact() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-white">
-            Start Your Build
+            Get a Free Quote
           </h2>
           <p className="text-sm sm:text-base font-sans text-gray-300 font-light mt-4">
-            Tell us about your project and we'll get back to you. Or call, WhatsApp, or email us directly below.
+            Tell us about your ceiling and we'll get back to you with a quote. Or call or WhatsApp us directly below.
           </p>
         </div>
 
@@ -95,6 +93,7 @@ export default function Contact() {
                 </span>
                 <span className="text-base font-sans text-white font-medium block">{CONTACT_INFO.phoneFormatted}</span>
                 <span className="text-sm font-sans text-gray-300 block">{CONTACT_INFO.phone2Formatted}</span>
+                <span className="text-sm font-sans text-gray-300 block">{CONTACT_INFO.phone3Formatted}</span>
               </div>
             </a>
 
@@ -115,30 +114,15 @@ export default function Contact() {
               </div>
             </a>
 
-            <a
-              href={`mailto:${CONTACT_INFO.email}`}
-              className="flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 p-5 transition-colors group"
-            >
-              <div className="w-11 h-11 bg-blue-700 flex items-center justify-center shrink-0 group-hover:bg-yellow-500 transition-colors">
-                <Mail className="w-5 h-5 text-yellow-500 group-hover:text-[#101820] transition-colors" />
-              </div>
-              <div>
-                <span className="text-[10px] font-mono text-gray-400 tracking-wider uppercase block mb-1">
-                  Email
-                </span>
-                <span className="text-base font-sans text-white font-medium block break-all">{CONTACT_INFO.email}</span>
-              </div>
-            </a>
-
             <div className="flex items-start gap-4 bg-white/5 border border-white/10 p-5">
               <div className="w-11 h-11 bg-blue-700 flex items-center justify-center shrink-0">
                 <MapPin className="w-5 h-5 text-yellow-500" />
               </div>
               <div>
                 <span className="text-[10px] font-mono text-gray-400 tracking-wider uppercase block mb-1">
-                  Office
+                  Service Area
                 </span>
-                <span className="text-sm font-sans text-gray-200 font-light block">{CONTACT_INFO.officeAddress}</span>
+                <span className="text-sm font-sans text-gray-200 font-light block">{CONTACT_INFO.serviceArea}</span>
               </div>
             </div>
 
@@ -152,17 +136,6 @@ export default function Contact() {
                 </span>
                 <span className="text-sm font-sans text-gray-200 font-light block">{CONTACT_INFO.hours}</span>
               </div>
-            </div>
-
-            {/* Real embedded map */}
-            <div className="border border-white/10 overflow-hidden h-56">
-              <iframe
-                src={mapSrc}
-                title="Joetom Engineers office location"
-                className="w-full h-full grayscale-[30%] contrast-[1.1]"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
             </div>
 
           </div>
@@ -229,7 +202,7 @@ export default function Contact() {
 
                     <div className="space-y-2">
                       <label className="text-xs font-mono tracking-wider text-gray-300 uppercase block">
-                        Project Category
+                        Ceiling Type
                       </label>
                       <select
                         name="projectType"
@@ -237,10 +210,12 @@ export default function Contact() {
                         onChange={handleInputChange}
                         className="w-full bg-blue-700 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white focus:outline-none transition-colors cursor-pointer"
                       >
-                        <option value="residential">Residential</option>
-                        <option value="commercial">Commercial</option>
-                        <option value="civil">Civil & Structural</option>
-                        <option value="renovations">Renovations</option>
+                        <option value="pvc">PVC Ceiling</option>
+                        <option value="gypsum">Gypsum Ceiling</option>
+                        <option value="suspended">Suspended / Drop Ceiling</option>
+                        <option value="lighting">Cove &amp; LED Lighting</option>
+                        <option value="repairs">Repairs &amp; Renovations</option>
+                        <option value="not-sure">Not sure yet</option>
                       </select>
                     </div>
                   </div>
@@ -269,7 +244,7 @@ export default function Contact() {
 
                   <div className="space-y-2">
                     <label className="text-xs font-mono tracking-wider text-gray-300 uppercase block">
-                      Tell Us About Your Project *
+                      Tell Us About Your Ceiling *
                     </label>
                     <textarea
                       name="description"
@@ -278,7 +253,7 @@ export default function Contact() {
                       required
                       rows={5}
                       className="w-full bg-white/5 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white placeholder:text-gray-400 focus:outline-none transition-colors resize-none"
-                      placeholder="Describe your site, scope of work, and timeline..."
+                      placeholder="Which rooms, roughly what size, and the look you're after..."
                     />
                   </div>
 

@@ -20,10 +20,10 @@ export default function Projects() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900">
-            Selected Projects
+            Our Recent Ceilings
           </h2>
           <p className="text-sm sm:text-base font-sans text-gray-600 font-light mt-4 max-w-2xl">
-            A look at our current work. We're adding more projects and photos to this portfolio as they're completed.
+            A look at the kind of ceilings we install and renovate. We're adding more project photos here as jobs are completed.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ export default function Projects() {
                           </span>
                         </div>
                         <div className="space-y-1">
-                          <span className="text-[10px] font-mono text-gray-400 block">BUILD SCALE</span>
+                          <span className="text-[10px] font-mono text-gray-400 block">AREA</span>
                           <span className="text-xs font-sans text-gray-800 font-medium flex items-center gap-1.5">
                             <Layers className="w-3.5 h-3.5 text-gray-500" />
                             {selectedProject.area}

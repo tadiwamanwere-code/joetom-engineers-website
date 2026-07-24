@@ -1,28 +1,32 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Home, Briefcase, Compass, Hammer, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { PanelTop, Layers, Grid3x3, Lightbulb, Wrench, PaintRoller, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { SERVICES_DATA } from '../data';
 
 export default function Services() {
-  const [expandedId, setExpandedId] = useState<string | null>('residential');
+  const [expandedId, setExpandedId] = useState<string | null>('pvc-ceilings');
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Home':
-        return <Home className="w-6 h-6 text-blue-500" />;
-      case 'Briefcase':
-        return <Briefcase className="w-6 h-6 text-blue-500" />;
-      case 'Compass':
-        return <Compass className="w-6 h-6 text-blue-500" />;
-      case 'Hammer':
-        return <Hammer className="w-6 h-6 text-blue-500" />;
+      case 'PanelTop':
+        return <PanelTop className="w-6 h-6 text-blue-400" />;
+      case 'Layers':
+        return <Layers className="w-6 h-6 text-blue-400" />;
+      case 'Grid3x3':
+        return <Grid3x3 className="w-6 h-6 text-blue-400" />;
+      case 'Lightbulb':
+        return <Lightbulb className="w-6 h-6 text-blue-400" />;
+      case 'Wrench':
+        return <Wrench className="w-6 h-6 text-blue-400" />;
+      case 'PaintRoller':
+        return <PaintRoller className="w-6 h-6 text-blue-400" />;
       default:
-        return <Hammer className="w-6 h-6 text-blue-500" />;
+        return <Layers className="w-6 h-6 text-blue-400" />;
     }
   };
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#052E46] text-white overflow-hidden relative">
+    <section id="services" className="py-24 md:py-32 bg-[#0e2a5e] text-white overflow-hidden relative">
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-zinc-800/20 rounded-full blur-[120px] pointer-events-none" />
@@ -32,24 +36,24 @@ export default function Services() {
         {/* Section Header */}
         <div className="max-w-2xl mb-16 md:mb-24">
           <div className="flex items-center gap-2 mb-4">
-            <span className="h-[1px] w-6 bg-blue-500"></span>
-            <span className="text-xs font-mono tracking-[0.25em] text-blue-500 uppercase font-semibold">
-              OUR CAPABILITIES
+            <span className="h-[1px] w-6 bg-blue-400"></span>
+            <span className="text-xs font-mono tracking-[0.25em] text-blue-400 uppercase font-semibold">
+              OUR SERVICES
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-white mb-6">
-            Millimeter Accuracy. <br />Architectural Mastery.
+            Clean Lines. <br />Modern Ceilings.
           </h2>
           <p className="text-sm sm:text-base font-sans text-gray-400 font-light leading-relaxed">
-            Joetom Engineers provides specialized engineering and contracting services for residential, commercial, and civil construction projects.
+            Alstyle Construction installs and renovates ceilings for homes, offices, and commercial spaces — PVC, gypsum, suspended systems, cove lighting, and decorative finishes.
           </p>
         </div>
 
         {/* Real Site Photo Banner */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full mb-16 md:mb-24 overflow-hidden border border-white/10">
           <img
-            src="/images/gallery-concrete-action.jpg"
-            alt="Joetom Engineers crew at work during a concrete pour"
+            src="/images/ceiling-livingroom.svg"
+            alt="Modern gypsum ceiling with LED cove lighting by Alstyle Construction"
             className="w-full h-full object-cover"
             loading="lazy"
             referrerPolicy="no-referrer"
@@ -57,7 +61,7 @@ export default function Services() {
           <div className="absolute inset-0 bg-blue-600/40" />
           <div className="absolute bottom-0 left-0 px-6 py-4 md:px-8 md:py-6 bg-blue-800/90">
             <span className="text-xs md:text-sm font-mono tracking-[0.2em] text-yellow-500 uppercase font-semibold">
-              Real Crews. Real Results.
+              Neat Work. Modern Finish.
             </span>
           </div>
         </div>
@@ -89,7 +93,7 @@ export default function Services() {
                       </div>
                       <div>
                         <span className="text-xs font-mono text-gray-500 tracking-wider block mb-0.5">
-                          CAPABILITY_0{SERVICES_DATA.findIndex(s => s.id === service.id) + 1}
+                          SERVICE_0{SERVICES_DATA.findIndex(s => s.id === service.id) + 1}
                         </span>
                         <h3 className="text-lg font-display font-bold text-white tracking-tight">
                           {service.title}
@@ -107,7 +111,7 @@ export default function Services() {
 
           {/* Details Panel Viewport (Right) */}
           <div className="lg:col-span-7 h-full flex flex-col justify-between">
-            <div className="bg-[#0A425F] border border-white/5 p-8 md:p-12 min-h-[420px] flex flex-col justify-between relative group overflow-hidden">
+            <div className="bg-[#16367c] border border-white/5 p-8 md:p-12 min-h-[420px] flex flex-col justify-between relative group overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 transform translate-x-12 -translate-y-12 rotate-45 pointer-events-none transition-transform duration-700 group-hover:scale-125" />
               
               <AnimatePresence mode="wait">
@@ -124,15 +128,12 @@ export default function Services() {
                     >
                       <div>
                         <div className="flex items-center gap-3 mb-4">
-                          <span className="px-2 py-0.5 bg-blue-500/10 text-blue-500 text-[10px] font-mono tracking-widest uppercase">
-                            CORE METHOD
-                          </span>
-                          <span className="text-xs font-mono text-gray-500">
-                            Est. Specs v2.1
+                          <span className="px-2 py-0.5 bg-blue-400/10 text-blue-400 text-[10px] font-mono tracking-widest uppercase">
+                            SERVICE
                           </span>
                         </div>
                         <h4 className="text-2xl font-display font-bold text-white mb-4">
-                          {service.title} Specifications
+                          {service.title}
                         </h4>
                         <p className="text-sm font-sans text-gray-400 font-light leading-relaxed mb-8">
                           {service.description}
@@ -140,12 +141,12 @@ export default function Services() {
 
                         <div className="border-t border-white/5 pt-6">
                           <span className="text-[10px] font-mono tracking-widest text-gray-500 block mb-4 uppercase">
-                            CORE OPERATIONAL DELIVERABLES:
+                            WHAT'S INCLUDED:
                           </span>
                           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {service.details.map((detail, index) => (
                               <li key={index} className="flex items-start gap-3">
-                                <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                                 <span className="text-xs font-sans text-gray-300 font-light leading-snug">
                                   {detail}
                                 </span>
@@ -157,13 +158,13 @@ export default function Services() {
 
                       <div className="border-t border-white/5 pt-6 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <span className="text-xs font-mono text-gray-500">
-                          Looking for specific material loads?
+                          Like the look of this?
                         </span>
                         <a
                           href="#contact"
-                          className="text-xs font-mono text-blue-500 hover:text-white transition-colors flex items-center gap-2 group/btn"
+                          className="text-xs font-mono text-blue-400 hover:text-white transition-colors flex items-center gap-2 group/btn"
                         >
-                          REQUEST BLUEPRINT SPECS
+                          GET A FREE QUOTE
                           <span className="group-hover:translate-x-1 transition-transform">→</span>
                         </a>
                       </div>
@@ -171,10 +172,10 @@ export default function Services() {
                   ))
                 ) : (
                   <div className="flex flex-col items-center justify-center text-center h-full py-12">
-                    <Compass className="w-12 h-12 text-zinc-700 mb-4 animate-spin-slow" />
-                    <h4 className="text-lg font-display text-gray-400 mb-2">Select a capability</h4>
+                    <Layers className="w-12 h-12 text-blue-400/40 mb-4" />
+                    <h4 className="text-lg font-display text-gray-400 mb-2">Select a service</h4>
                     <p className="text-xs text-gray-500 max-w-xs font-light">
-                      Click any of our architectural capabilities on the left to examine detailed technical guidelines and structural criteria.
+                      Tap any of our ceiling services on the left to see exactly what's included.
                     </p>
                   </div>
                 )}

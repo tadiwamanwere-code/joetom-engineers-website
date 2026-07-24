@@ -1,135 +1,100 @@
 import { Project, Service, Value, ProcessStep } from './types';
 
 export const HERO_DATA = {
-  bgImage: "/images/hero-site-team.jpg",
-  tagline: "BUILDING EXCELLENCE",
-  headline: "Joetom Engineers",
-  subheadline: "Professional civil, structural and construction solutions built for strength, precision, and long term value.",
-  ctaPrimary: "Get A Quote",
-  ctaSecondary: "View Projects"
+  bgImage: "/images/placeholder-hero.svg",
+  tagline: "TRANSFORM YOUR SPACE",
+  headline: "Alstyle Construction",
+  subheadline: "Ceiling installation & renovation specialists — PVC, gypsum, and suspended ceilings finished to a clean, modern standard, from top to bottom.",
+  ctaPrimary: "Get A Free Quote",
+  ctaSecondary: "View Our Work"
 };
 
 export const VALUES_DATA: Value[] = [
   {
-    title: "Committed to Safety",
-    description: "Every site, every crew, every phase — safety comes first on every Joetom Engineers project."
+    title: "Clean, Precise Finishes",
+    description: "Seamless joints, crisp bulkheads, and level lines — the kind of finish that makes a whole room feel new."
   },
   {
-    title: "Driven by Quality",
-    description: "High-quality workmanship and well-supervised teams, from raft foundations through to finishing works."
+    title: "Quality Materials",
+    description: "Durable PVC panels, proper gypsum board, and trusted fittings, so your ceiling looks great and lasts for years."
   },
   {
-    title: "Building for Tomorrow",
-    description: "Reliable delivery and honest communication, so what we build stands for the long term."
+    title: "Neat, On-Time Installs",
+    description: "We work to schedule, protect your space, and clean up after ourselves — no mess left behind."
   }
 ];
 
-export const OWNER_DATA = {
-  name: "Lovemore Munguri",
-  title: "Managing Director",
-  photo: "/images/lovemore-owner-full-body.png",
-  bio: [
-    "Lovemore Munguri leads Joetom Engineers, overseeing the firm's civil, structural, and construction projects from initial site assessment through final handover.",
-    "Under his direction, Joetom Engineers works with residential, commercial, and civil clients across Zimbabwe, with an emphasis on technical focus, disciplined site work, and well managed construction projects."
-  ],
-  quote: "Joetom Engineers is built around technical focus, disciplined site work, and a commitment to strong, well managed construction projects."
-};
-
 export const SERVICES_DATA: Service[] = [
   {
-    id: "building-construction",
-    iconName: "Home",
-    title: "Building Construction",
-    description: "Practical construction solutions for residential, commercial, and multi-storey projects, combining site experience with reliable supervision.",
+    id: "pvc-ceilings",
+    iconName: "PanelTop",
+    title: "PVC Ceilings",
+    description: "Waterproof, durable, and low-maintenance PVC ceilings — an affordable, modern finish ideal for kitchens, bathrooms, and high-humidity rooms.",
     details: [
-      "Residential and commercial builds",
-      "Multi-storey and high-rise buildings",
-      "Steel structures, brickwork, and roofing",
-      "Reliable, well-supervised site teams"
+      "Water- and moisture-resistant panels",
+      "Wide range of colours and finishes",
+      "Easy to clean and long lasting",
+      "Fast, cost-effective installation"
     ]
   },
   {
-    id: "civil-structural",
-    iconName: "Briefcase",
-    title: "Civil & Structural Works",
-    description: "Structural works and civil engineering built to handle the demands of multi-storey and high-rise construction.",
+    id: "gypsum-ceilings",
+    iconName: "Layers",
+    title: "Gypsum Ceilings",
+    description: "Smooth, seamless gypsum ceilings with bulkheads, cove detailing, and recessed lighting for a premium, contemporary interior.",
     details: [
-      "Raft foundations",
-      "Substructure works",
-      "Superstructure works",
-      "Concrete and formwork"
+      "Seamless skimmed finish",
+      "Bulkheads and dropped detailing",
+      "Cove and recessed lighting ready",
+      "Painted to your colour of choice"
     ]
   },
   {
-    id: "steel-fixing",
-    iconName: "Hammer",
-    title: "Steel Fixing & Concreting",
-    description: "Experienced steel fixers and shuttering carpenters for multi-storey buildings, built for strength and built for excellence.",
+    id: "suspended-ceilings",
+    iconName: "Grid3x3",
+    title: "Suspended / Drop Ceilings",
+    description: "Grid-based suspended ceilings for offices, shops, and commercial spaces — tidy, practical, and easy to access for services above.",
     details: [
-      "Steel fixing and shuttering carpentry",
-      "Rebar installation and tying",
-      "Concrete mix pouring",
-      "Slab casting and foundation preparation"
+      "Concealed and exposed grid systems",
+      "Acoustic and moisture-resistant tiles",
+      "Easy access to wiring and pipework",
+      "Ideal for offices and retail fit-outs"
     ]
   },
   {
-    id: "brickwork-finishing",
-    iconName: "Hammer",
-    title: "Brickwork & Finishing Works",
-    description: "Blockwork laying, plastering, and interior and exterior finishing works carried out with careful craftsmanship.",
+    id: "cove-led-lighting",
+    iconName: "Lightbulb",
+    title: "Cove & LED Lighting",
+    description: "Recessed downlights and LED cove lighting designed into your ceiling for warm, modern ambience and a standout feature finish.",
     details: [
-      "Brickwork and blockwork laying",
-      "External plastering and wall treatments",
-      "Interior finishing works",
-      "Roofing"
+      "Recessed downlight installation",
+      "LED strip cove lighting",
+      "Feature and mood lighting layouts",
+      "Energy-efficient fittings"
     ]
   },
   {
-    id: "roads-paving",
-    iconName: "Compass",
-    title: "Roads, Paving & Drainage",
-    description: "Grading, paving, and drainage works for access roads and civil site layouts.",
+    id: "repairs-renovations",
+    iconName: "Wrench",
+    title: "Ceiling Repairs & Renovations",
+    description: "Repairs for sagging, cracked, or water-damaged ceilings, plus full renovations to bring dated rooms up to a fresh, modern standard.",
     details: [
-      "Subgrade grading and compaction",
-      "Interlocking block paving",
-      "Surface water drainage",
-      "Site civil layouts"
+      "Sagging and cracked ceiling repairs",
+      "Water-damage replacement",
+      "Re-skimming and refinishing",
+      "Full room-by-room renovation"
     ]
   },
   {
-    id: "water-sewer",
-    iconName: "Compass",
-    title: "Water & Sewer Reticulation",
-    description: "Municipal and industrial pipework systems, supply lines, and sewer reticulation.",
+    id: "cornices-finishes",
+    iconName: "PaintRoller",
+    title: "Cornices & Finishes",
+    description: "Decorative cornices, trims, and clean painted finishes that frame your ceiling and tie the whole room together.",
     details: [
-      "Excavation and pipe-laying",
-      "Sewer reticulation lines",
-      "Water supply grids",
-      "Reticulation for residential and commercial sites"
-    ]
-  },
-  {
-    id: "boq-management",
-    iconName: "Briefcase",
-    title: "BoQs & Project Management",
-    description: "Bills of Quantities (BoQ) costing and full project management to keep projects on schedule and on budget.",
-    details: [
-      "Bills of Quantities (BoQ) costing",
-      "Contract supervision",
-      "Project management schedules",
-      "Site logs and milestone tracking"
-    ]
-  },
-  {
-    id: "house-plan-printing",
-    iconName: "Compass",
-    title: "House Plan Printing & Scanning",
-    description: "Fast, clear, and professional house plan printing and scanning services.",
-    details: [
-      "Large-format plan printing",
-      "Plan scanning and digitizing",
-      "Fast turnaround",
-      "Professional print quality"
+      "Cornice supply and fitting",
+      "Decorative trims and mouldings",
+      "Skimming and preparation",
+      "Neat, even paint finishes"
     ]
   }
 ];
@@ -137,81 +102,110 @@ export const SERVICES_DATA: Service[] = [
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: "01",
-    title: "Consultation & Feasibility",
-    description: "We review your structural concepts, site conditions, zoning regulations, and target budget to establish project parameters.",
-    duration: "1 - 2 Weeks",
-    deliverables: ["Site inspection summary", "Pre-construction schedule estimate", "Preliminary budget outlines"]
+    title: "Consultation & Measurement",
+    description: "We visit your space, take accurate measurements, and talk through the look, materials, and lighting you have in mind.",
+    duration: "Free Site Visit",
+    deliverables: ["On-site measurement", "Material & finish options", "Design suggestions"]
   },
   {
     step: "02",
-    title: "Design & Engineering",
-    description: "Our engineers work with you to finalize blueprints, load calculations, material orders, and municipal permits.",
-    duration: "4 - 8 Weeks",
-    deliverables: ["Approved structural blueprints", "Interior surface & finish specifications", "Final fixed-price quote and timeline"]
+    title: "Quote & Design",
+    description: "You get a clear, fixed quote with a ceiling and lighting layout — no surprises, no hidden costs.",
+    duration: "1 - 3 Days",
+    deliverables: ["Fixed written quote", "Ceiling & lighting layout", "Agreed timeline"]
   },
   {
     step: "03",
-    title: "Construction",
-    description: "Our site team executes the layout, foundations, framing, steel fixing, and concrete casting under supervision.",
-    duration: "Varies by project scope",
-    deliverables: ["Progress updates", "Inspections at each major phase", "Site access logs and quality checks"]
+    title: "Installation",
+    description: "Our team installs the framing, boards or panels, bulkheads, and cornices — working tidily and protecting your furniture.",
+    duration: "Varies by room size",
+    deliverables: ["Framing & brandering", "Board / panel fitting", "Bulkheads & cornices"]
   },
   {
     step: "04",
-    title: "Handover & Support",
-    description: "A final walkthrough is conducted. We deliver keys, documentation, and are available for post-handover queries.",
-    duration: "1 - 2 Weeks",
-    deliverables: ["Operation manuals where applicable", "Occupancy permit coordination", "Post-handover support"]
+    title: "Finishing & Handover",
+    description: "We skim, paint, fit lighting, clean up, and walk you through the finished ceiling before we leave.",
+    duration: "1 - 2 Days",
+    deliverables: ["Skim, paint & lighting", "Full site clean-up", "Final walkthrough"]
   }
 ];
 
-// Verified via joetomengineers.co.zw and client-supplied materials — additional case studies to be added as they're completed.
+// Representative of Alstyle Construction's ceiling work. Additional named projects
+// and client references available on request.
 export const PROJECTS_DATA: Project[] = [
   {
-    id: "chinhoyi-mall",
-    title: "Chinhoyi Mall",
-    category: "commercial",
-    categoryLabel: "Commercial Development",
-    description: "A commercial retail development in Chinhoyi's central business district, for client Mrs Mxegi.",
-    afterImage: "/images/gallery-large-aerial.jpg",
-    year: "In Progress",
-    location: "Chinhoyi CBD, Zimbabwe",
-    client: "Mrs Mxegi",
-    area: "Undisclosed",
+    id: "living-room-led-cove",
+    title: "Living Room LED Cove Ceiling",
+    category: "residential",
+    categoryLabel: "Gypsum Ceiling",
+    description: "A modern gypsum ceiling with a recessed perimeter and LED cove lighting, giving the living room a warm, floating-ceiling feature effect.",
+    afterImage: "/images/ceiling-livingroom.svg",
+    year: "Recent",
+    location: "Zimbabwe",
+    client: "Private Residence",
+    area: "Living Room",
     highlights: [
-      "Commercial retail construction",
-      "Located in Chinhoyi's central business district",
-      "Project currently in progress"
+      "Dropped perimeter with LED cove lighting",
+      "Recessed downlights throughout",
+      "Smooth, seamless painted finish"
+    ]
+  },
+  {
+    id: "hallway-bulkhead",
+    title: "Hallway Bulkhead & Downlights",
+    category: "residential",
+    categoryLabel: "Gypsum Ceiling",
+    description: "A stepped bulkhead ceiling running the length of a hallway, with evenly spaced recessed downlights for a clean, high-end look.",
+    afterImage: "/images/ceiling-hallway.svg",
+    year: "Recent",
+    location: "Zimbabwe",
+    client: "Private Residence",
+    area: "Hallway / Passage",
+    highlights: [
+      "Stepped bulkhead detailing",
+      "Evenly spaced recessed downlights",
+      "Crisp, level lines end to end"
+    ]
+  },
+  {
+    id: "modern-kitchen-ceiling",
+    title: "Modern Kitchen Ceiling",
+    category: "residential",
+    categoryLabel: "Ceiling & Lighting",
+    description: "A flush, moisture-tolerant ceiling with recessed lighting over a modern kitchen and island — bright, even, and easy to maintain.",
+    afterImage: "/images/ceiling-kitchen.svg",
+    year: "Recent",
+    location: "Zimbabwe",
+    client: "Private Residence",
+    area: "Kitchen",
+    highlights: [
+      "Even recessed downlight layout",
+      "Moisture-tolerant finish",
+      "Clean lines over kitchen island"
     ]
   }
 ];
 
-// Real site and project photography supplied by the client.
+// Branded placeholder imagery — replace these SVGs with real Alstyle project photos.
 export const GALLERY_IMAGES = [
-  { src: "/images/gallery-brickwork-aerial.jpg", alt: "Brickwork and blockwork on a Joetom Engineers site, aerial view" },
-  { src: "/images/gallery-rebar-wide.jpg", alt: "Steel fixing and rebar reinforcement on site" },
-  { src: "/images/gallery-concrete-pour.jpg", alt: "Concrete pour in progress" },
-  { src: "/images/gallery-large-aerial.jpg", alt: "Aerial view of a Joetom Engineers construction site" },
-  { src: "/images/gallery-roofing-house.jpg", alt: "Roofing works on a residential build" },
-  { src: "/images/gallery-structure-house.jpg", alt: "Structural framing on a residential build" },
-  { src: "/images/gallery-concrete-action.jpg", alt: "Site crew at work during a concrete pour" },
-  { src: "/images/gallery-team-portrait-roof.jpg", alt: "Joetom Engineers site team on a rooftop" },
-  { src: "/images/gallery-crew-celebration.jpg", alt: "Joetom Engineers crew celebrating a project milestone" }
+  { src: "/images/ceiling-livingroom.svg", alt: "Gypsum living room ceiling with LED cove lighting by Alstyle Construction" },
+  { src: "/images/ceiling-hallway.svg", alt: "Hallway bulkhead ceiling with recessed downlights" },
+  { src: "/images/ceiling-kitchen.svg", alt: "Modern kitchen ceiling with recessed lighting" },
+  { src: "/images/ceiling-pvc.svg", alt: "Waterproof PVC ceiling installation" },
+  { src: "/images/ceiling-suspended.svg", alt: "Suspended grid ceiling in an office space" },
+  { src: "/images/ceiling-cornice.svg", alt: "Bedroom gypsum ceiling with decorative cornice and cove lighting" }
 ];
 
 export const CONTACT_INFO = {
-  phone: "0773514902",
-  phoneFormatted: "+263 773 514 902",
-  phone2: "0717986356",
-  phone2Formatted: "+263 717 986 356",
-  whatsapp: "263773514902",
-  email: "joetomengineers1@gmail.com",
-  officeAddress: "279 Ethlyn House, Chinhoyi, Zimbabwe",
-  hours: "Monday - Saturday: 7:30 AM - 5:00 PM (CAT)",
-  website: "https://www.joetomengineers.co.zw",
-  facebook: "https://www.facebook.com/joetomengineers/",
-  coordinates: {
-    lat: -17.3592, // Coordinates of Chinhoyi
-    lng: 30.1983
-  }
+  phone: "0773583427",
+  phoneFormatted: "+263 77 358 3427",
+  phone2: "0719054935",
+  phone2Formatted: "+263 71 905 4935",
+  phone3: "0717115481",
+  phone3Formatted: "+263 71 711 5481",
+  whatsapp: "263773583427",
+  serviceArea: "Nationwide — serving clients across Zimbabwe",
+  hours: "Monday - Saturday: 8:00 AM - 5:00 PM (CAT)",
+  facebook: "https://www.facebook.com/p/Alstyle-Construction-100082589794481/",
+  facebookHandle: "Alstyle Construction"
 };

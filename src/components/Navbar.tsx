@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import Logo from './Logo';
 
 interface NavbarProps {
   activeSection: string;
@@ -27,7 +28,6 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
   const navItems = [
     { id: 'home', label: 'HOME' },
     { id: 'about', label: 'ABOUT' },
-    { id: 'owner', label: 'OWNER' },
     { id: 'services', label: 'SERVICES' },
     { id: 'projects', label: 'PROJECTS' },
     { id: 'gallery', label: 'GALLERY' },
@@ -56,18 +56,13 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
           className="flex items-center gap-2.5 group text-left cursor-pointer"
           id="brand-logo-btn"
         >
-          <img
-            src="/images/joetom-logo-400.png"
-            alt="Joetom Engineers"
-            className="h-10 w-auto object-contain"
-            referrerPolicy="no-referrer"
-          />
+          <Logo className="h-10 w-auto" />
           <div>
             <span className="font-display font-bold tracking-wide text-base text-white block leading-tight">
-              JOETOM ENGINEERS
+              ALSTYLE CONSTRUCTION
             </span>
-            <span className="text-[9px] font-mono tracking-[0.25em] text-blue-400 block -mt-0.5">
-              BUILDING EXCELLENCE
+            <span className="text-[9px] font-mono tracking-[0.25em] text-yellow-500 block -mt-0.5">
+              CEILINGS &amp; RENOVATIONS
             </span>
           </div>
         </button>

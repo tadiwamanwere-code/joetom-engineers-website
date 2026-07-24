@@ -15,7 +15,7 @@ export default function Chatbot() {
     {
       id: 'welcome',
       role: 'model',
-      text: "Welcome to Joetom Engineers. I am Joetom AI, your digital structural assistant. Ask me about our high-end structural design-build, civil, and construction services, or our certified project methodologies.",
+      text: "Hi, welcome to Alstyle Construction! I'm Alstyle AI. Ask me about our ceiling services — PVC, gypsum, suspended ceilings, cove lighting, repairs — or how to get a free quote.",
       timestamp: new Date(),
     },
   ]);
@@ -68,7 +68,7 @@ export default function Chatbot() {
         }),
       });
 
-      let errorText = "I apologize, but I encountered a network error while connecting to Joetom servers. Please try again shortly or contact our offices directly.";
+      let errorText = "Sorry, I hit a network error just now. Please try again shortly, or call/WhatsApp us on +263 77 358 3427.";
       if (!response.ok) {
         try {
           const errData = await response.json();
@@ -117,9 +117,9 @@ export default function Chatbot() {
   };
 
   const quickQuestions = [
-    "Tell me about the Chinhoyi Mall project",
-    "What services do you offer?",
-    "How do I request a quote?",
+    "What's the difference between PVC and gypsum ceilings?",
+    "Do you install LED cove lighting?",
+    "How do I get a free quote?",
   ];
 
   return (
@@ -142,7 +142,7 @@ export default function Chatbot() {
             )}
           </AnimatePresence>
           <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-gray-900 text-[#F4F7FA] text-xs font-mono py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow border border-white/5">
-            JOETOM ASSISTANT
+            ALSTYLE ASSISTANT
           </span>
         </motion.button>
       </div>
@@ -159,16 +159,16 @@ export default function Chatbot() {
             transition={{ type: 'spring', damping: 25, stiffness: 350 }}
           >
             {/* Header */}
-            <div className="bg-[#052E46] text-[#F4F7FA] p-4 flex items-center justify-between border-b border-white/10" id="chat-header">
+            <div className="bg-[#0e2a5e] text-[#F4F7FA] p-4 flex items-center justify-between border-b border-white/10" id="chat-header">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center border border-blue-500/30">
                   <HardHat className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-display font-bold tracking-wide">JOETOM AI</h4>
+                  <h4 className="text-sm font-display font-bold tracking-wide">ALSTYLE AI</h4>
                   <div className="flex items-center gap-1.5 mt-0.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-[10px] font-mono text-gray-400 tracking-wider">ONLINE CONSULTANT</span>
+                    <span className="text-[10px] font-mono text-gray-400 tracking-wider">CEILINGS ASSISTANT</span>
                   </div>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export default function Chatbot() {
             {/* Info bar */}
             <div className="bg-[#F4F7FA] border-b border-gray-100 p-2 px-4 flex items-center gap-2 text-gray-500 text-[11px] font-sans">
               <Info className="w-3.5 h-3.5 text-blue-500 shrink-0" />
-              <span>Ask about custom estimates, project engineering, or materials.</span>
+              <span>Ask about ceiling types, lighting, repairs, or getting a quote.</span>
             </div>
 
             {/* Messages Thread */}
@@ -259,7 +259,7 @@ export default function Chatbot() {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Message Joetom AI..."
+                placeholder="Message Alstyle AI..."
                 className="flex-grow bg-gray-50 border border-gray-200 rounded px-3 py-2 text-xs sm:text-sm font-sans focus:outline-none focus:border-blue-500 transition-colors"
                 disabled={isLoading}
               />

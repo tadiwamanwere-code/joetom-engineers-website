@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Owner from './components/Owner';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import Gallery from './components/Gallery';
@@ -26,7 +25,7 @@ export default function App() {
   // Scroll listener to update active navigation item based on current viewport
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'owner', 'services', 'projects', 'gallery', 'process', 'contact'];
+      const sections = ['home', 'about', 'services', 'projects', 'gallery', 'process', 'contact'];
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       for (const section of sections) {
@@ -63,10 +62,7 @@ export default function App() {
         {/* Company About & Values (Bone/Ivory White Background) */}
         <About />
 
-        {/* Meet the Owner Spotlight (Mid-Navy Background) */}
-        <Owner />
-
-        {/* Capabilities Accordion (Dark Navy Background) */}
+        {/* Services Accordion (Dark Navy Background) */}
         <Services />
 
         {/* Portfolio & Case Studies (Light Background) */}

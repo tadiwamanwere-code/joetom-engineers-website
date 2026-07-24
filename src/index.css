@@ -6,17 +6,17 @@
   --font-display: "Poppins", ui-sans-serif, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Joetom Engineers brand palette */
-  --color-blue-400: #0fa4c7; /* Bright Cyan */
-  --color-blue-500: #087ea3; /* Construction Blue */
-  --color-blue-600: #052e46; /* Deep Navy */
-  --color-blue-700: #0a425f; /* Panel Navy (lighter, for cards on navy sections) */
-  --color-blue-800: #03202f; /* Darkest Navy (footer) */
-  --color-blue-900: #011016;
+  /* Alstyle Construction brand palette (logo blue + orange) */
+  --color-blue-400: #4c8de0; /* Bright accent blue (highlights on dark) */
+  --color-blue-500: #2358b0; /* Royal blue (icons, accents) */
+  --color-blue-600: #0e2a5e; /* Deep navy (hero / nav / dark sections) */
+  --color-blue-700: #16367c; /* Panel navy (cards on dark sections) */
+  --color-blue-800: #0a1e45; /* Darkest navy (footer) */
+  --color-blue-900: #060f26;
 
-  --color-yellow-400: #f7c545;
-  --color-yellow-500: #f5b51b; /* Safety Yellow (CTAs) */
-  --color-yellow-600: #d99e0c;
+  --color-yellow-400: #f9c368; /* Light amber */
+  --color-yellow-500: #f5a833; /* Alstyle orange (CTAs) */
+  --color-yellow-600: #e08e1e; /* Deep orange (hover) */
 }
 
 /* Custom scrollbar styling for a polished, architectural look */
@@ -24,14 +24,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #011016;
+  background: #060f26;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0a425f;
+  background: #16367c;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0fa4c7; /* brand cyan */
+  background: #f5a833; /* Alstyle orange */
 }
 
 /* Smooth scroll behavior */

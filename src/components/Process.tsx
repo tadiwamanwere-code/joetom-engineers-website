@@ -17,10 +17,10 @@ export default function Process() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900">
-            From Blueprint to Handover
+            From Consultation to Clean Finish
           </h2>
           <p className="text-sm sm:text-base font-sans text-gray-600 font-light mt-4">
-            Four clear phases, from first consultation to final handover.
+            Four simple steps, from your free site visit to the final walkthrough.
           </p>
         </div>
 

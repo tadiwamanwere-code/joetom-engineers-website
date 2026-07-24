@@ -19,10 +19,10 @@ export default function Gallery() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-white">
-            Our Work in Progress
+            Our Ceiling Gallery
           </h2>
           <p className="text-sm sm:text-base font-sans text-gray-300 font-light mt-4">
-            Real photos from Joetom Engineers job sites — steel fixing, concreting, brickwork, and the team behind it.
+            A selection of ceiling styles we install — gypsum bulkheads, LED cove lighting, PVC, suspended grids, and decorative finishes.
           </p>
         </div>
 

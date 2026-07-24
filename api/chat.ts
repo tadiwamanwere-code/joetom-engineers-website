@@ -1,38 +1,39 @@
 import { GoogleGenAI } from "@google/genai";
 
-const SYSTEM_INSTRUCTION = `You are "Joetom AI", the professional virtual assistant for Joetom Engineers, a civil engineering, structural works, and building construction firm based in Chinhoyi, Zimbabwe.
+const SYSTEM_INSTRUCTION = `You are "Alstyle AI", the friendly virtual assistant for Alstyle Construction, a ceiling installation and renovation company serving clients across Zimbabwe.
 Our details:
-- Location: 279 Ethlyn House, Chinhoyi, Zimbabwe
-- Contact Phone: +263 77 351 4902
-- Contact Email: info@joetomengineers.co.zw
-- Managing Director: Lovemore Munguri
-- Working Hours: Monday - Saturday: 7:30 AM - 5:00 PM (CAT)
+- Service area: Nationwide across Zimbabwe — we come to you
+- Phone / WhatsApp: +263 77 358 3427
+- Other numbers: +263 71 905 4935, +263 71 711 5481
+- Facebook: Alstyle Construction
+- Working hours: Monday - Saturday, 8:00 AM - 5:00 PM (CAT)
 
-Key capabilities and services:
-1. Building Construction (Residential, Commercial, Industrial)
-2. Civil & Structural Works (Concrete design, columns, beams, foundation modeling)
-3. Steel Fixing & Concreting (Reinforcements, slab casting, concrete)
-4. Brickwork & Finishing Works (Bricklaying, plastering, decorative finishing)
-5. Roads, Paving & Drainage (Stormwater management, interlocking pavers, grading, drainage modeling)
-6. Water & Sewer Reticulation (Municipal grids, industrial piping supply grids)
-7. Bills of Quantities (BoQs) & Project Management (Costings, contract supervision)
+What we do (ceilings and ceiling-related finishes only):
+1. PVC Ceilings — waterproof, durable, low-maintenance; ideal for kitchens, bathrooms, and humid rooms
+2. Gypsum Ceilings — smooth seamless finish, bulkheads, cove detailing, ready for recessed lighting
+3. Suspended / Drop Ceilings — grid systems for offices, shops, and commercial spaces
+4. Cove & LED Lighting — recessed downlights and LED cove/strip lighting designed into the ceiling
+5. Ceiling Repairs & Renovations — sagging, cracked, or water-damaged ceilings, re-skimming, full renovations
+6. Cornices & Finishes — decorative cornices, trims, skimming and neat paint finishes
 
-Current project: Chinhoyi Mall — a commercial retail development in Chinhoyi's CBD, currently in progress, for client Mrs Mxegi. Do not invent other past projects, client names, dollar figures, or credentials that were not given to you here — if asked for details you don't have, say the portfolio is being updated and suggest contacting the office directly.
+How we work: Free consultation & measurement → fixed written quote & design → installation → finishing, lighting, clean-up, and a final walkthrough.
 
-Your tone should be professional, confident, precise, and polite. Avoid verbose filler. Focus on construction quality, structural integrity, and our engineering standards. If asked how to initiate a consultation or request a quote, politely guide them to the inquiry form at the bottom of the page or provide our direct email and phone contact details.`;
+Do not invent prices, specific past clients, timelines, or guarantees you were not given. If asked about price, explain that it depends on the room size, ceiling type, and finish, and that the best next step is a free quote — point them to the quote form at the bottom of the page or to call/WhatsApp +263 77 358 3427.
+
+Keep replies friendly, clear, and short. Stay focused on ceilings; if asked about general building work we don't offer, say Alstyle specialises in ceilings and invite them to get in touch.`;
 
 function fallbackReply(message: string): string {
   const lowerMsg = message.toLowerCase();
-  let reply = "Thank you for reaching out to Joetom Engineers. Currently, our AI assistant is running in offline demo mode. ";
+  let reply = "Thanks for reaching out to Alstyle Construction. Our AI assistant is offline right now, but here's a quick answer. ";
 
-  if (lowerMsg.includes("project") || lowerMsg.includes("build") || lowerMsg.includes("mall") || lowerMsg.includes("portfolio")) {
-    reply += "We're currently building the Chinhoyi Mall, a commercial retail development in Chinhoyi's CBD. We're adding more completed and in-progress projects to our portfolio as they're finished.";
-  } else if (lowerMsg.includes("contact") || lowerMsg.includes("quote") || lowerMsg.includes("price") || lowerMsg.includes("consult") || lowerMsg.includes("estimate") || lowerMsg.includes("hire")) {
-    reply += "To get a comprehensive structural blueprint review, Bills of Quantities (BoQ) calculation, or project quotation, please fill out our inquiry form at the bottom of the page, or contact us directly at info@joetomengineers.co.zw or +263 77 351 4902.";
+  if (lowerMsg.includes("project") || lowerMsg.includes("gallery") || lowerMsg.includes("work") || lowerMsg.includes("photo")) {
+    reply += "You can see examples of our ceiling work in the gallery and projects sections above — gypsum bulkheads, LED cove lighting, PVC, suspended grids, and more. For references, just get in touch.";
+  } else if (lowerMsg.includes("contact") || lowerMsg.includes("quote") || lowerMsg.includes("price") || lowerMsg.includes("cost") || lowerMsg.includes("estimate") || lowerMsg.includes("book")) {
+    reply += "Pricing depends on room size, ceiling type, and finish. For a free quote, fill in the form at the bottom of the page or call/WhatsApp us on +263 77 358 3427.";
   } else if (lowerMsg.includes("hello") || lowerMsg.includes("hi") || lowerMsg.includes("hey")) {
-    reply = "Welcome to Joetom Engineers. I am Joetom AI, your civil and structural engineering assistant. How can I assist you with your construction, civil works, or project management inquiries today?";
+    reply = "Hi! I'm Alstyle AI. We install and renovate ceilings across Zimbabwe — PVC, gypsum, suspended ceilings, cove lighting, and repairs. How can I help?";
   } else {
-    reply += "We specialize in Building Construction, Civil & Structural Works, Steel Fixing & Concreting, Brickwork & Finishing, Roads, Paving, Water & Sewer Reticulation, and BoQ Project Management. Let us know if you would like details on our services or active builds.";
+    reply += "We specialise in PVC ceilings, gypsum ceilings, suspended/drop ceilings, cove & LED lighting, ceiling repairs & renovations, and cornices & finishes. Tell us what you need and we'll help.";
   }
   return reply;
 }
@@ -61,7 +62,7 @@ export default async function handler(req: any, res: any) {
 
     const ai = new GoogleGenAI({
       apiKey,
-      httpOptions: { headers: { "User-Agent": "joetom-website" } },
+      httpOptions: { headers: { "User-Agent": "alstyle-website" } },
     });
 
     const contents: any[] = [];

@@ -1,5 +1,6 @@
-import { ArrowUp, ArrowUpRight, Phone, Mail, Facebook } from 'lucide-react';
+import { ArrowUp, Phone, MessageCircle, Facebook } from 'lucide-react';
 import { CONTACT_INFO } from '../data';
+import Logo from './Logo';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -22,23 +23,18 @@ export default function Footer({ onNavigate }: FooterProps) {
               onClick={() => onNavigate('home')}
               className="flex items-center gap-2.5 group text-left cursor-pointer"
             >
-              <img
-                src="/images/joetom-logo-400.png"
-                alt="Joetom Engineers"
-                className="h-10 w-auto object-contain"
-                referrerPolicy="no-referrer"
-              />
+              <Logo className="h-10 w-auto" />
               <div>
                 <span className="font-display font-bold tracking-wide text-base text-white block leading-tight">
-                  JOETOM ENGINEERS
+                  ALSTYLE CONSTRUCTION
                 </span>
-                <span className="text-[9px] font-mono tracking-[0.25em] text-blue-400 block -mt-0.5">
-                  BUILDING EXCELLENCE
+                <span className="text-[9px] font-mono tracking-[0.25em] text-yellow-500 block -mt-0.5">
+                  CEILINGS &amp; RENOVATIONS
                 </span>
               </div>
             </button>
             <p className="text-xs md:text-sm font-sans text-gray-400 font-light leading-relaxed max-w-sm">
-              Civil, structural, and construction engineering services based in Chinhoyi, Zimbabwe.
+              Ceiling installation &amp; renovation specialists — PVC, gypsum, and suspended ceilings. Serving clients across Zimbabwe.
             </p>
           </div>
 
@@ -50,11 +46,11 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-2.5 text-xs font-mono">
               {[
                 { id: 'about', label: 'ABOUT US' },
-                { id: 'owner', label: 'THE OWNER' },
-                { id: 'services', label: 'CAPABILITIES' },
-                { id: 'projects', label: 'CASE STUDIES' },
+                { id: 'services', label: 'SERVICES' },
+                { id: 'projects', label: 'OUR WORK' },
                 { id: 'gallery', label: 'GALLERY' },
-                { id: 'process', label: 'THE LIFECYCLE' },
+                { id: 'process', label: 'HOW IT WORKS' },
+                { id: 'contact', label: 'GET A QUOTE' },
               ].map((link) => (
                 <li key={link.id}>
                   <button
@@ -94,22 +90,22 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <a
-                  href={`mailto:${CONTACT_INFO.email}`}
+                  href={`tel:${CONTACT_INFO.phone3}`}
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                 >
-                  <Mail className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
-                  {CONTACT_INFO.email}
+                  <Phone className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
+                  {CONTACT_INFO.phone3Formatted}
                 </a>
               </li>
               <li>
                 <a
-                  href={CONTACT_INFO.website}
+                  href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                 >
-                  <ArrowUpRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
-                  joetomengineers.co.zw
+                  <MessageCircle className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
+                  WhatsApp Us
                 </a>
               </li>
               <li>
@@ -120,7 +116,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                 >
                   <Facebook className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors" />
-                  @joetomengineers
+                  {CONTACT_INFO.facebookHandle}
                 </a>
               </li>
             </ul>
@@ -131,8 +127,8 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Credits Line */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-8 text-[10px] font-mono text-gray-500">
           <div>
-            <p>© {new Date().getFullYear()} JOETOM ENGINEERS. ALL RIGHTS RESERVED.</p>
-            <p className="mt-1 text-gray-600">CIVIL ENGINEERING & CONSTRUCTION — CHINHOYI, ZIMBABWE.</p>
+            <p>© {new Date().getFullYear()} ALSTYLE CONSTRUCTION. ALL RIGHTS RESERVED.</p>
+            <p className="mt-1 text-gray-600">CEILING INSTALLATION & RENOVATION — ZIMBABWE.</p>
           </div>
 
           <button

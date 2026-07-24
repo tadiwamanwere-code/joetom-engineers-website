@@ -33,7 +33,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       >
         <img
           src={HERO_DATA.bgImage}
-          alt="Joetom Engineers site team on a construction project"
+          alt="Modern ceiling with recessed lighting installed by Alstyle Construction"
           className="w-full h-full object-cover object-center scale-105"
           referrerPolicy="no-referrer"
         />

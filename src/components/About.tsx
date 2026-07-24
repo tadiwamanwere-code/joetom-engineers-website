@@ -23,16 +23,16 @@ export default function About() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900 leading-tight">
-              A Legacy of Steel, Concrete & Vision.
+              Ceilings That Transform the Whole Room.
             </h2>
           </div>
-          
+
           <div className="lg:col-span-7 font-sans text-gray-700 space-y-6 text-base md:text-lg font-light leading-relaxed">
             <p>
-              Joetom Engineers was born from a singular conviction: that ambitious architectural designs should be engineered and executed without compromise. We refuse to let structural hurdles dilute design elegance.
+              Alstyle Construction specialises in ceilings — PVC, gypsum, and suspended systems — installed and finished to a clean, modern standard. A new ceiling is one of the fastest ways to lift the look and feel of any space.
             </p>
             <p>
-              By combining structural contracting expertise with careful project management, we deliver residential builds, complex structural frames, and commercial developments across Zimbabwe. Every joint, pour, and material selection is executed with care.
+              From a single room to a full home or office, we handle everything: design, framing, boarding, cornices, cove and recessed lighting, and the final finish. We work tidily, on schedule, and serve clients across Zimbabwe.
             </p>
           </div>
         </div>
